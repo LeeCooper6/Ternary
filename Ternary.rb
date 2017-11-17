@@ -1,8 +1,9 @@
-# Binary is base 2, meaning all binary numbers are 0 or 1.
-# Ternary is base 3, meaning all ternary numbers are 0, 1, or 2.
+# Binary is base 2 meaning binary numbers are 0 or 1.
+# Ternary is base 3 meaning ternary numbers are 0, 1, or 2.
 # This ternary allows -1, 0, or 1 for symmetry's sake.
-# This ternary "rotates" between values: -1 => 0 => 1.
-# This ternary rolls over from 1 to -1 or vice versa. So -1 => 0 => 1 => -1... and 1 => 0 => -1 => 1...
+# This ternary "rotates" circularly through values: -1 => 0 => 1.
+# This ternary spins in either direction: -1 => 0 => 1 or 1 => 0 => -1.
+# This ternary rolls over and loops circularly from 1 to -1 or -1 to 1. So -1 => 0 => 1 => -1... or 1 => 0 => -1 => 1...
 class Ternary
   # Creates reader for value attribute.
   attr_reader :value
@@ -77,6 +78,3 @@ class Ternary
     rotate -1 * rotations
   end
 end
-
-# TODO: TODOs
-# TODO: Test, Refactor, Document
